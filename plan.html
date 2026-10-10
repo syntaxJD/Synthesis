@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Budget calculator and trip planning form.">
+  <title>Plan Your Trip | Discover Accra</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-bar">
+        <a class="logo" href="index.html">Discover <span>Accra</span></a>
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button>
+          <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        </div>
+      </div>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul><li><a href="index.html">Home</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="itinerary.html">Itinerary</a></li><li><a href="plan.html" aria-current="page">Plan Your Trip</a></li></ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-title"><div class="container"><h1>Plan Your Trip</h1><p>Fill in the form. Your budget updates live.</p></div></div>
+    <div class="container">
+      <div id="saved-plan" class="notice" role="status" hidden></div>
+      <div class="plan-layout">
+        <form id="plan-form" novalidate>
+          <fieldset>
+            <legend>About you</legend>
+            <label for="fullname">Full name</label>
+            <input type="text" id="fullname" name="fullname" autocomplete="name" required>
+            <p class="error" id="err-fullname" role="alert"></p>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <p class="error" id="err-email" role="alert"></p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Trip details</legend>
+            <label for="arrival">Arrival date</label>
+            <input type="date" id="arrival" name="arrival" required>
+            <p class="error" id="err-arrival" role="alert"></p>
+            <div class="two-col">
+              <div>
+                <label for="days">Days (1-14)</label>
+                <input type="number" id="days" name="days" min="1" max="14" value="3" required>
+                <p class="error" id="err-days" role="alert"></p>
+              </div>
+              <div>
+                <label for="travellers">Travellers (1-10)</label>
+                <input type="number" id="travellers" name="travellers" min="1" max="10" value="2" required>
+                <p class="error" id="err-travellers" role="alert"></p>
+              </div>
+            </div>
+            <label for="hotel">Hotel type</label>
+            <select id="hotel" name="hotel">
+              <option value="budget">Budget (GH&cent;250 / room / night)</option>
+              <option value="standard" selected>Standard (GH&cent;550)</option>
+              <option value="luxury">Luxury (GH&cent;1,200)</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Getting around</legend>
+            <label class="inline-label"><input type="radio" name="transport" value="walk"> Walking and trotros</label>
+            <label class="inline-label"><input type="radio" name="transport" value="rideshare" checked> Ride-hailing</label>
+            <label class="inline-label"><input type="radio" name="transport" value="private"> Private driver</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Activities</legend>
+            <label class="inline-label"><input type="checkbox" name="activity" value="jamestown" checked> Jamestown (GH&cent;10)</label>
+            <label class="inline-label"><input type="checkbox" name="activity" value="independence" checked> Independence Arch (Free)</label>
+            <label class="inline-label"><input type="checkbox" name="activity" value="nkrumah"> Nkrumah Park (GH&cent;40)</label>
+            <label class="inline-label"><input type="checkbox" name="activity" value="labadi" checked> Labadi Beach (GH&cent;30)</label>
+            <label class="inline-label"><input type="checkbox" name="activity" value="makola"> Makola Market (Free)</label>
+            <label class="inline-label"><input type="checkbox" name="activity" value="aburi"> Aburi Gardens (GH&cent;30)</label>
+          </fieldset>
+
+          <button type="submit" class="btn">Save my plan</button>
+        </form>
+
+        <aside class="result-box" aria-labelledby="budget-title">
+          <h2 id="budget-title" style="margin-top:0">Estimated budget</h2>
+          <dl aria-live="polite">
+            <dt>Hotel</dt><dd id="out-hotel">-</dd>
+            <dt>Food</dt><dd id="out-food">-</dd>
+            <dt>Transport</dt><dd id="out-transport">-</dd>
+            <dt>Activities</dt><dd id="out-activities">-</dd>
+            <dt class="total">Total</dt><dd class="total" id="out-total">-</dd>
+            <dt>Per person</dt><dd id="out-person">-</dd>
+          </dl>
+          <p class="note" style="color:#fff;opacity:.85">Two travellers share one room. Prices are rough estimates.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Discover Accra. A student project. Prices are estimates in Ghana cedis (GH&cent;).</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+<script src="js/plan.js"></script>
+</body>
+</html>

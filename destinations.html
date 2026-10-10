@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browse and filter top destinations in Accra.">
+  <title>Destinations | Discover Accra</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-bar">
+        <a class="logo" href="index.html">Discover <span>Accra</span></a>
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button>
+          <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        </div>
+      </div>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul><li><a href="index.html">Home</a></li><li><a href="destinations.html" aria-current="page">Destinations</a></li><li><a href="itinerary.html">Itinerary</a></li><li><a href="plan.html">Plan Your Trip</a></li></ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-title"><div class="container"><h1>Destinations</h1><p>Six places to start with. Data is loaded with Ajax from a JSON file.</p></div></div>
+    <div class="container">
+      <div class="toolbar" role="group" aria-label="Filter destinations">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="history">History</button>
+        <button class="filter-btn" data-category="beach">Beach</button>
+        <button class="filter-btn" data-category="market">Market</button>
+        <button class="filter-btn" data-category="nature">Nature</button>
+        <label for="search" class="skip-link">Search destinations</label>
+        <input type="search" id="search" placeholder="Search destinations...">
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <section aria-label="Destination list"><div id="dest-grid" class="grid"></div></section>
+      <section aria-labelledby="fav-title">
+        <h2 id="fav-title">Your saved places</h2>
+        <ul id="fav-list"></ul>
+        <p><a class="btn small" href="plan.html">Plan a trip with these</a></p>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Discover Accra. A student project. Prices are estimates in Ghana cedis (GH&cent;).</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+<script src="js/fallback-data.js"></script>
+<script src="js/destinations.js"></script>
+</body>
+</html>

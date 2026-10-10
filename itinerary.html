@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A 3-day Accra itinerary.">
+  <title>Itinerary | Discover Accra</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-bar">
+        <a class="logo" href="index.html">Discover <span>Accra</span></a>
+        <div class="header-actions">
+          <button id="theme-toggle" class="theme-toggle" aria-pressed="false">Dark mode</button>
+          <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+        </div>
+      </div>
+      <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+        <ul><li><a href="index.html">Home</a></li><li><a href="destinations.html">Destinations</a></li><li><a href="itinerary.html" aria-current="page">Itinerary</a></li><li><a href="plan.html">Plan Your Trip</a></li></ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="page-title"><div class="container"><h1>3-Day Itinerary</h1><p>History, beach and a day away from the city.</p></div></div>
+    <div class="container">
+      <p><button id="toggle-all" class="btn small">Expand all days</button></p>
+      <div class="table-wrap">
+        <table>
+          <caption>Suggested schedule for three days in Accra</caption>
+          <thead>
+            <tr><th scope="col">Day</th><th scope="col">Time</th><th scope="col">Activity</th><th scope="col">Est. cost</th><th scope="col">Details</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="rowgroup" rowspan="3">Day 1<br>Old Accra</th>
+              <td>Morning</td><td>Jamestown &amp; Lighthouse</td><td>GH&cent;10</td>
+              <td rowspan="3"><button class="btn small toggle-details" aria-expanded="false" aria-controls="d1">Show details</button>
+                <div id="d1" class="details"><ul>
+                  <li>Start at 8am
+                    <ul><li>Walk the fishing harbour</li><li>Climb the lighthouse</li></ul></li>
+                  <li>Lunch of kenkey and fried fish</li>
+                  <li>Evening at Independence Arch</li>
+                </ul></div></td>
+            </tr>
+            <tr><td>Afternoon</td><td>Makola Market</td><td>Free</td></tr>
+            <tr><td>Evening</td><td>Independence Arch &amp; Black Star Square</td><td>Free</td></tr>
+
+            <tr>
+              <th scope="rowgroup" rowspan="2">Day 2<br>Coast</th>
+              <td>Morning</td><td>Kwame Nkrumah Memorial Park</td><td>GH&cent;40</td>
+              <td rowspan="2"><button class="btn small toggle-details" aria-expanded="false" aria-controls="d2">Show details</button>
+                <div id="d2" class="details"><ul>
+                  <li>Museum first, then gardens
+                    <ul><li>Take water</li><li>Allow 2 hours</li></ul></li>
+                  <li>Labadi Beach from 1pm
+                    <ul><li>Try grilled tilapia</li><li>Weekends have live music</li></ul></li>
+                </ul></div></td>
+            </tr>
+            <tr><td>Afternoon</td><td>Labadi Beach</td><td>GH&cent;30</td></tr>
+
+            <tr>
+              <th scope="row">Day 3<br>Day trip</th>
+              <td>All day</td><td>Aburi Botanical Gardens</td><td>GH&cent;30</td>
+              <td><button class="btn small toggle-details" aria-expanded="false" aria-controls="d3">Show details</button>
+                <div id="d3" class="details"><ul>
+                  <li>Leave by 7:30am to avoid traffic</li>
+                  <li>Wood carvers' stalls on the way down</li>
+                  <li>Return by 5pm</li>
+                </ul></div></td>
+            </tr>
+            <tr><td colspan="5" class="span-all">Rest evenings are free. Swap days around if the weather changes.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Costs are per person and are estimates only.</p>
+      <p><a class="btn" href="plan.html">Budget this trip</a></p>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> Discover Accra. A student project. Prices are estimates in Ghana cedis (GH&cent;).</p>
+    </div>
+  </footer>
+  <script src="js/main.js"></script>
+<script src="js/itinerary.js"></script>
+</body>
+</html>
